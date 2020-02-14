@@ -80,29 +80,29 @@
     3. Setting AWS IoT device defender
 
 **Interfaces between the components**
-The components should be integrated with each other through the microcontroller. The heartbeat sensor will feed directly into this, and any applications will obviously sit within memory on the device. The cloud component should interface over wifi using the ESP chip. Any information acquired from the cloud should be stored over micro-SD or EEPROM (not decided yet).
+* The components should be integrated with each other through the microcontroller. The heartbeat sensor will feed directly into this, and any applications will obviously sit within memory on the device. The cloud component should interface over wifi using the ESP chip. Any information acquired from the cloud should be stored over micro-SD or EEPROM (not decided yet).
 
 **Security Considerations**
 1. Incorporate Security at the Design Phase
-Security is very important in IoT devices as they are often involved in a lot of our very personal lives. We are building a watch that will interact with a person and monitor their personal health information. Keeping personal health information private is at the forefront of our minds as we design the application and storage of this device. Confidentiality is the most important. The application will have Access Control and require a username and password to log in and review any health information. We will make sure that we are using up-to-date operating systems and attempt to use parts that have encryption built-in if possible. Luckily the failure of the device would not cause any real risk, so availability is not a concern as much as confidentiality. The  integrity of the data is important in order to give the most accurate advice, but risks to that are moderate, nonetheless something to keep in mind.
+* Security is very important in IoT devices as they are often involved in a lot of our very personal lives. We are building a watch that will interact with a person and monitor their personal health information. Keeping personal health information private is at the forefront of our minds as we design the application and storage of this device. Confidentiality is the most important. The application will have Access Control and require a username and password to log in and review any health information. We will make sure that we are using up-to-date operating systems and attempt to use parts that have encryption built-in if possible. Luckily the failure of the device would not cause any real risk, so availability is not a concern as much as confidentiality. The  integrity of the data is important in order to give the most accurate advice, but risks to that are moderate, nonetheless something to keep in mind.
 2. Advance Security Updates and Vulnerability Management
-The scope of this project is over the course of a few months leading up to a final demo, due to this security updates are not something that we will need to worry about for the future. If this were to be a real application in the field we should absolutely make sure we have a way to securely update the hardware and application, but due to the scope of the project at this time it is not something we need to consider.
+* The scope of this project is over the course of a few months leading up to a final demo, due to this security updates are not something that we will need to worry about for the future. If this were to be a real application in the field we should absolutely make sure we have a way to securely update the hardware and application, but due to the scope of the project at this time it is not something we need to consider.
 3. Build on Proven Security Practices
-We have read over the NIST Framework and will consider the suggestions in our project as well as the basic cybersecurity practices. That being said we don’t need to be using the information sharing platforms as ours is a smaller personal tool and not a large IoT device.
+* We have read over the NIST Framework and will consider the suggestions in our project as well as the basic cybersecurity practices. That being said we don’t need to be using the information sharing platforms as ours is a smaller personal tool and not a large IoT device.
 4. Prioritize Security Measures According to Potential Impact
-The consequences of a security failure are a loss of personal health information, which is not a high level security threat. Because of that we do not need something as in-depth as red teaming.
+* The consequences of a security failure are a loss of personal health information, which is not a high level security threat. Because of that we do not need something as in-depth as red teaming.
 5. Promote Transparency across IoT
-Transparency is of vital importance when it comes to security and users understanding their risks when providing and personal information.We will provide information on what we are doing with the data they provide and how we are securing their data.
+* Transparency is of vital importance when it comes to security and users understanding their risks when providing and personal information.We will provide information on what we are doing with the data they provide and how we are securing their data.
 6. Connect Carefully and Deliberately
-We will be careful to ensure that our device only connects to what we want it connected to. It is not vital that our device is continually connected so looking at if we can have it only connected a portion of the time in order to help increase our security practices.
+* We will be careful to ensure that our device only connects to what we want it connected to. It is not vital that our device is continually connected so looking at if we can have it only connected a portion of the time in order to help increase our security practices.
 
 **Group Assignments**
 * Sam
-  Application
-  Application Security
+  * Application
+  * Application Security
 * Eric
-  Hardware
-  Software
+  * Hardware
+  * Software
 * Aki
-  Cloud
-  Cloud Security
+  * Cloud
+  * Cloud Security
