@@ -31,10 +31,10 @@ void setup() {
 
   iotClient.setAWSRegion("us-west-2");
   iotClient.setAWSEndpoint("amazonaws.com");
-  iotClient.setAWSDomain("a2dbgto9gcvbct-ats.iot.us-west-2.amazonaws.com");
+  iotClient.setAWSDomain("*****-ats.iot.us-west-2.amazonaws.com");//secret
   iotClient.setAWSPath("/things/smart_watch/shadow");
-  iotClient.setAWSKeyID("AKIAWHIJ2XVXE3RN75A6");
-  iotClient.setAWSSecretKey("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");
+  iotClient.setAWSKeyID("*****"); // secret
+  iotClient.setAWSSecretKey("*****"); // secret
   iotClient.setHttpClient(&httpClient);
   iotClient.setDateTimeProvider(&dateTimeProvider);
 }
