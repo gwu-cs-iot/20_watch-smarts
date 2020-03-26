@@ -7,6 +7,7 @@ panic attack and get the same options as before*/
 #include "DFRobot_ST7687S_Latch.h"
 
 //MAX30105 particleSensor;
+bool panic;
 
 void setup() {
   // put your setup code here, to run once:
@@ -14,9 +15,8 @@ void setup() {
   // no sensor so put a constant value rn
   int normalHeartrate = 67;
   int heartrate = 66;
-  bool panic = false;
+  panic = false;
   //  user input of what they want to do to calm down 
-  int choice = 1;
 }
 
 
@@ -41,6 +41,13 @@ void panicMode(){
   tft.setTextColor(DISPLAY_WHITE);  //set text color as white
   tft.setTextSize(2);  //2 * text size, default text size: 6 * 8
   tft.print("click thrice for focus");
+  delay(5000);
+  tft.setCursor(64, 64);
+  tft.setTextBackground(DISPLAY_BLACK);  //set text background as black
+  tft.setTextColor(DISPLAY_WHITE);  //set text color as white
+  tft.setTextSize(2);  //2 * text size, default text size: 6 * 8
+  tft.print("click four times to exit");
+  delay(5000);
   int choice = getChoice();
   promptChoice(choice);
 }
@@ -55,6 +62,12 @@ int choice(){
   if(button.ClickNum == 3){
     return 3;
   }
+  if(button.ClickNum == 4){
+    return 4;
+  }
+  else{
+    return 0;
+  }
 }
 
 //do they want to do breathing exercise, mindfulness, focus
@@ -68,6 +81,8 @@ void promptChoice(int choice){
       break;
      case 3:
       focus();
+      break;
+     case 4:
       break;
      default:
       //error make pick again
