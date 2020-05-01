@@ -4,14 +4,15 @@ class Exercises{
   }
 
   breathing(){
-    window.alert("Breathing test")
+
+    window.open("breathe.html")
   }
 
   mindful(){
-    window.alert("Mindful test")
+    window.open("mindful.html")
   }
 
   focus(){
-    window.alert("Focus test")
+    window.open("focus.html")
   }
 }
