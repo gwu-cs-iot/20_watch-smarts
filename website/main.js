@@ -1,0 +1,5 @@
+var exercise = new Exercises()
+console.log("HELLO")
+document.querySelector("#one").addEventListener("click", () => { exercise.breathing()})
+document.querySelector("#two").addEventListener("click", () => { exercise.mindful()})
+document.querySelector("#three").addEventListener("click", () => { exercise.focus()})
