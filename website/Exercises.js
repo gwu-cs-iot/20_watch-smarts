@@ -4,6 +4,7 @@ class Exercises{
   }
 
   breathing(){
+
     window.open("breathe.html")
   }
 
