@@ -20,6 +20,7 @@
       1. BreatheImage.gif
 
 **How to Build and Use Our Project**
+
 HC-05 module
 Adafruit Pro trinket
 Download https://github.com/gwu-iot/20_watch-smarts/blob/master/watch.ino  <- arduino file
