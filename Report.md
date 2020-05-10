@@ -7,9 +7,11 @@
   1. Watch application designed to help a person calm down during a panic attack. The user can respond to the watch and choose one of three options. Based on the option picked the watch will guide the user through the appropriate exercise. The three exercises are a guided breathing, mindfulness, and forced focus exercise.
    2. Web application that also has the three exercises so the user can use that if they wish.
 * Cloud
-  1.
+  1. Wi-Fi chip(ESP8285), AWS IoT core(IoT platform), AWS Lambda(Program), AWS Simple Stroage Service.
+  
 * Security
   1. No data from the application is stored for either watch or web so there is no security needed for data management for either application.
+  2. When we use cloud service, the connection between Wi-FI chip and AWS IoT core is on the SSL. The data uploaded to the storage service is encrypted.
 
 
 **What changes were necessary in the project**
@@ -22,9 +24,9 @@ Heartbeat sensor was broken, couldn’t get shipment in time. This screen also t
   1. Not able to receive raw data since we were unable to get the heart rate sensor to work, switched to using the buttons on the watch as indicators instead.
   2. There is a website that goes with it, but it just has the basic exercises and does not contain any health recommendations or management tools.
 * Cloud
-  1.
+  1. ESP8285 can not be set in the smartwatch, then we have to check the AWS IoT separately.
 * Security
-  1.
+  1. Because ESP 8285 could not set in the smartwatch, real data transaction is not there. Then, we have to use a not real data for connection.
 
 **What you were not able to accomplish**
 * Hardware
@@ -35,11 +37,12 @@ Heartbeat sensor was broken, couldn’t get shipment in time. This screen also t
   1. Not able to get the heart rate sensor working so we had to use a different method to detect panic attacks.
   2. Did not get the actual data stored on the cloud. Because of this the health management and health care recommendations couldn’t happen without the data necessary.
 * Cloud
-  1.
+  1.Write a code for downloading the data from AWS IoT to WiFi chip.
 * Security
   * Application Security
-Because we did not store the data there is no access control or data security necessary for the application.
+  1. Because we did not store the data there is no access control or data security necessary for the application.
   * Cloud Security
+  1. Try to use a non AWS default setting security service.
 
 
 
@@ -53,3 +56,5 @@ Because we did not store the data there is no access control or data security ne
   2. Wrote software for watch
   3. Bluetooth code
 * Aki
+  1. Make a SSL connection between WiFi-chip and Amazon AWS IoT
+  2. Write a code for storing the data from WiFi chip to AWS storage service.
